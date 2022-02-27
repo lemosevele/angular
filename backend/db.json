@@ -1,29 +1,34 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Caneta BIC",
-            "price": 3.80
-        },
-        {
-            "id": 2,
-            "name": "Planner 2022 - Tilibra",
-            "price": 40.00
-        },
-        {
-            "id": 3,
-            "name": "Mouse Logitech",
-            "price": 98.00
-        },
-        {
-            "id": 4,
-            "name": "Teclado Logitech",
-            "price": 359.00
-        },
-        {
-            "id": 5,
-            "name": "Garrafa",
-            "price": 33.80
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta BIC",
+      "price": 3.8
+    },
+    {
+      "id": 2,
+      "name": "Planner 2022 - Tilibra",
+      "price": 40
+    },
+    {
+      "id": 3,
+      "name": "Mouse Logitech",
+      "price": 98
+    },
+    {
+      "id": 4,
+      "name": "Teclado Logitech",
+      "price": 359
+    },
+    {
+      "id": 5,
+      "name": "Garrafa",
+      "price": 33.8
+    },
+    {
+      "name": "Notebook",
+      "price": "6.812",
+      "id": 6
+    }
+  ]
 }
