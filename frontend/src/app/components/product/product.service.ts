@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { EMPTY, Observable } from 'rxjs';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { Product } from './product.model';
 import { catchError, map } from 'rxjs/operators';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
+import { Product } from './product.model';
 
 
 @Injectable({
