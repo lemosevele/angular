@@ -3,18 +3,16 @@
   <div class="busca">
     <input
       type="search"
-      [(ngModel)] = "campoBusca"
+      [formControl]="campoBusca"
     >
-    <button
-      (click)="buscarLivros()"
-    >
+    <button>
       <img src="assets/imagens/icone-busca.png" alt="Lupa de cor roxa">
     </button>
   </div>
   <p>Busque por assunto, autoria, nome...</p>
-<div class="container-card" *ngIf="listaLivros?.length > 0, else telaInicial">
-  <div *ngFor="let livro of listaLivros">
-    <app-livro [livro]="livro"></app-livro>
+<div class="container-card" *ngIf="livrosEncontrados$ | async as listaLivros, else telaInicial"> <!-- Com a instrução '| async' o Angular irá se inscrever no Observable -->
+  <div *ngFor="let livro of listaLivros">                                                        <!-- 'as listaLivros', é a variável local que armazena os resultados encontrados -->
+    <app-livro [livro]="livro"></app-livro>                                                      <!--  utilizando o '| async' não precisa fazer subscriber/unsubscriber manualmente -->
   </div>
 </div>
 <ng-template #telaInicial>
