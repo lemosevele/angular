@@ -10,17 +10,24 @@
     </button>
   </div>
   <p>Busque por assunto, autoria, nome...</p>
-<div class="container-card" *ngIf="livrosEncontrados$ | async as listaLivros, else telaInicial"> <!-- Com a instrução '| async' o Angular irá se inscrever no Observable -->
-  <div *ngFor="let livro of listaLivros">                                                        <!-- 'as listaLivros', é a variável local que armazena os resultados encontrados -->
-    <app-livro [livro]="livro"></app-livro>                                                      <!--  utilizando o '| async' não precisa fazer subscriber/unsubscriber manualmente -->
+  <div *ngIf="mensagemErro" class="resultados mensagem-erro">
+    {{ mensagemErro }}
   </div>
-</div>
-<ng-template #telaInicial>
-  <div class="imagens">
-    <h1 class="titulo">Busque o livro <br> que quiser na <br> nossa estante!</h1>
-    <img
-      class="ilustracao"
-      src="../../assets/imagens/ilustracao-estante.png"
-      alt="Ilustração de uma pessoa em pé ao lado de uma estante com livros e plantas">
+  <div *ngIf="livrosEncontrados$ | async" class="resultados">
+    {{ livrosResultado.totalItems }} resultados encontrados.
   </div>
-</ng-template>
+  <div class="container-card" *ngIf="livrosEncontrados$ | async as listaLivros, else telaInicial"> <!-- Com a instrução '| async' o Angular irá se inscrever no Observable -->
+    <div *ngFor="let livro of listaLivros">                                                        <!-- 'as listaLivros', é a variável local que armazena os resultados encontrados -->
+      <app-livro [livro]="livro"></app-livro>                                                      <!--  utilizando o '| async' não precisa fazer subscriber/unsubscriber manualmente -->
+    </div>
+  </div>
+  <ng-template #telaInicial>
+    <div class="imagens">
+      <h1 class="titulo">Busque o livro <br> que quiser na <br> nossa estante!</h1>
+      <img
+        class="ilustracao"
+        src="../../assets/imagens/ilustracao-estante.png"
+        alt="Ilustração de uma pessoa em pé ao lado de uma estante com livros e plantas">
+    </div>
+  </ng-template>
+</section>
