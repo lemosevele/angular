@@ -2,27 +2,101 @@
   "pensamentos": [
     {
       "id": 1,
-      "conteudo": "Que bom que vc veio",
-      "autoria": "Eve",
-      "modelo": "modelo1"
+      "conteudo": "A vida é como programar: às vezes você precisa debugar seus problemas",
+      "autoria": "Dev Sábia",
+      "modelo": "modelo1",
+      "favorito": true
     },
     {
       "id": 2,
-      "conteudo": "Estudando Angular no dia 11 de dezembro de 2025",
-      "autoria": "Dev Evele",
-      "modelo": "modelo2"
+      "conteudo": "Códigos não mentem, apenas seus programadores que às vezes se enganam",
+      "autoria": "Programador Filósofo",
+      "modelo": "modelo2",
+      "favorito": false
     },
     {
       "id": 3,
-      "conteudo": "Angular é o melhor :D",
-      "autoria": "Eve",
-      "modelo": "modelo3"
+      "conteudo": "Cada bug corrigido é uma vitória pequena em direção à excelência",
+      "autoria": "QA Dedicado",
+      "modelo": "modelo3",
+      "favorito": false
     },
     {
-      "conteudo": "Lorem ipsum",
-      "autoria": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "conteudo": "No mundo da tecnologia, quem para aprende; quem aprende nunca para",
+      "autoria": "Dev Infinita",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 5
+    },
+    {
+      "conteudo": "A criatividade é inteligência se divertindo com código e ideias",
+      "autoria": "Criadora Digital",
+      "modelo": "modelo1",
+      "favorito": true,
+      "id": 6
+    },
+    {
+      "conteudo": "Desenvolvimento é a arte de fazer o impossível parecer simples",
+      "autoria": "Artista de Código",
+      "modelo": "modelo1",
+      "favorito": true,
+      "id": 7
+    },
+    {
+      "conteudo": "Sonhe grande, codifique melhor, conquiste tudo",
+      "autoria": "Sonhadora Realista",
+      "modelo": "modelo1",
+      "favorito": false,
+      "id": 8
+    },
+    {
+      "conteudo": "A melhor forma de prever o futuro é codificá-lo com nossas próprias mãos",
+      "autoria": "Futurista Codificador",
+      "modelo": "modelo2",
+      "favorito": false,
+      "id": 9
+    },
+    {
+      "conteudo": "Inovação nasce quando curiosidade encontra determinação",
+      "autoria": "Inovadora Curiosa",
+      "modelo": "modelo1",
+      "favorito": false,
+      "id": 10
+    },
+    {
+      "conteudo": "Cada linha de código é um verso na poesia da tecnologia",
+      "autoria": "Poeta Desenvolvedor",
+      "modelo": "modelo1",
+      "favorito": false,
+      "id": 11
+    },
+    {
+      "conteudo": "Sucesso não é destino, é jornada - aproveite cada commit",
+      "autoria": "Viajante Digital",
+      "modelo": "modelo1",
+      "favorito": false,
+      "id": 12
+    },
+    {
+      "conteudo": "Conhecer o limite de sua vontade é o começo da sabedoria",
+      "autoria": "Pensadora Profunda",
+      "modelo": "modelo1",
+      "favorito": false,
+      "id": 13
+    },
+    {
+      "conteudo": "Quando todo mundo diz que é impossível, aquele que consegue muda o mundo",
+      "autoria": "Realizadora de Impossíveis",
+      "modelo": "modelo1",
+      "favorito": false,
+      "id": 14
+    },
+    {
+      "conteudo": "Beleza de uma aplicação é quando o código é tão limpo que parece magia",
+      "autoria": "Mágica Programadora",
+      "modelo": "modelo3",
+      "favorito": true,
+      "id": 15
     }
   ]
 }
