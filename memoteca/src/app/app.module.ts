@@ -28,7 +28,7 @@ import { BotaoCarregarMaisComponent } from './componentes/pensamentos/listar-pen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // FormsModule,
+    FormsModule,
     HttpClientModule,
     ReactiveFormsModule
   ],
