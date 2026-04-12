@@ -1,0 +1,60 @@
+# OpenTelemetry Collector - Configuração Simplificada para Logs
+# Recebe logs HTTP/JSON do Angular
+# Envia para Dynatrace em Protobuf
+
+receivers:
+  # Receptor HTTP OTLP - recebe logs do Angular
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+        cors:
+          allowed_origins:
+            - http://localhost:4200
+            - http://127.0.0.1:4200
+            - http://localhost
+            - http://127.0.0.1
+          allowed_headers:
+            - Content-Type
+            - Authorization
+          max_age: 7200
+
+processors:
+  # Processa logs em lotes antes de enviar
+  batch:
+    timeout: 10s
+    send_batch_size: 100
+    send_batch_max_size: 500
+
+exporters:
+  # Exportador OTLP HTTP para Dynatrace
+  otlphttp:
+    endpoint: https://wzs62299.live.dynatrace.com/api/v2/otlp
+    headers:
+      Authorization: Api-Token ${DYNATRACE_API_TOKEN}
+    timeout: 30s
+    retry_on_failure:
+      enabled: true
+      initial_interval: 5s
+      max_interval: 30s
+
+  # Logs para console (debug local)
+  logging:
+    loglevel: info
+
+  # Exportador Loki para Grafana Cloud
+  loki:
+    endpoint: ${GRAFANA_LOKI_ENDPOINT}
+    timeout: 30s
+    retry_on_failure:
+      enabled: true
+      initial_interval: 5s
+      max_interval: 30s
+
+service:
+  pipelines:
+    # Pipeline de LOGS
+    logs:
+      receivers: [otlp]
+      processors: [batch, attributes]
+      exporters: [otlphttp, loki, logging]

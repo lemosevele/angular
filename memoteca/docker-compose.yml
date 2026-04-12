@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  # OpenTelemetry Collector - recebe logs do Angular, envia para Dynatrace
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.88.0
+    command: [ "--config=/etc/otel-collector-config.yaml" ]
+    ports:
+      - "4318:4318"      # HTTP receiver para logs
+      - "13133:13133"    # Health check
+    volumes:
+      - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
