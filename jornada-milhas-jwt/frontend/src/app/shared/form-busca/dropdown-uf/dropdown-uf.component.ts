@@ -14,15 +14,14 @@ export class DropdownUfComponent implements OnInit {
   @Input() label: string = '';
   @Input() iconePrefixo: string = '';
   @Input() control!: FormControl;
+  @Input() placeholder: string = '';
 
   unidadesFederativas: UnidadeFederativa[] = [];
 
   filteredOptions$?: Observable<UnidadeFederativa[]>;
 
-
   constructor(
     private unidadeFederativaService: UnidadeFederativaService) {
-
   }
 
   ngOnInit(): void {
