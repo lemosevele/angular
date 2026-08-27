@@ -5,7 +5,7 @@
         Crie sua conta
       </mat-card-title>
       <section>
-        <div class="acoesPerfil">
+        <div class="acoesPerfil" *ngIf="perfilComponent">
           <h2>Dados pessoais</h2>
           <button mat-stroked-button color="primary">
             <mat-icon>logout</mat-icon>
@@ -68,8 +68,8 @@
           </div>
         </div>
       </mat-card-content>
-      <mat-divider></mat-divider>
-      <div class="acessoPerfil">
+      <mat-divider *ngIf="perfilComponent"></mat-divider>
+      <div class="acessoPerfil" *ngIf="perfilComponent">
         <h2>Dados de acesso</h2>
       </div>
       <mat-card-content>
@@ -111,6 +111,7 @@
         <button mat-flat-button
           [disabled]="cadastroForm.invalid"
           color="primary"
+          (click)="executarAcaoClique()"
         >CADASTRAR
         </button>
       </mat-card-actions>
